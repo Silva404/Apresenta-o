@@ -9,7 +9,6 @@ server.set('view engine', 'njk')
 // pega apasta public e deixa na home
 server.use(express.static('public'))
 
-
 // atrelando o servidor express com o nunjucks
 nunjucks.configure('views', {
     express: server,
@@ -17,6 +16,7 @@ nunjucks.configure('views', {
 })
 
 
+// minhas paginas web
 server.get('/', (req, res) => {
     res.render('home')
 })
@@ -31,6 +31,15 @@ server.get('/portfolio', (req, res) => {
 })
 
 
+
+// funcao 404
+server.use((req, res) => {
+    res.status(404).render('not-found')
+})
+
+
+
+// porta do servidor
 server.listen(3000, () => {
     console.log('Servidor ligado!')
 })
