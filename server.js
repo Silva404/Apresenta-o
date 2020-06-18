@@ -40,6 +40,6 @@ server.use((req, res) => {
 
 
 // porta do servidor
-server.listen(3000, () => {
+server.listen(5000, () => {
     console.log('Servidor ligado!')
 })
