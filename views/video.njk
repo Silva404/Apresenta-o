@@ -3,37 +3,36 @@
 {% block styles %}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/video.css">
 {% endblock styles %}
 
 {% block title %}
-    <title>Foodfy</title>
+    <title>Videos</title>
 {% endblock title %}
 
 {% block content %}
 
     <div id="wrapper">
-        <h1>Portfolio</h1>
+        <h1>{{ items.tittle }}</h1>
 
     </div>
 
-    <section class="cards">
+    <section class="video">
 
-        {% for item in items %}
-            <div class="card" id="id">
-                <div class="card_image-container">
-                    <img src="url" alt="EU">
-                </div>
-
-                <div class="card_content">
-                    <p>title</p>
-                </div>
-
-                <div class="card_info">
-                    <p> duration</p>
-                    <p class="card_price">price</p>
-                </div>
+        <div class="card" id="{{ items.id}}">
+            <div class="card_video-container">
+                <iframe src="https://youtube.com/embed/{{ items.id}}" frameborder="0"></iframe>
             </div>
-        {% endfor %}
+
+            <div class="card_content">
+                <p>{{ items.tittle}}</p>
+            </div>
+
+            <div class="card_info">
+                <p>{{ items.duration}}</p>
+                <p class="card_price">{{ items.price}}</p>
+            </div>
+        </div>
 
     </section>
 

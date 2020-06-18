@@ -31,6 +31,16 @@ server.get('/portfolio', (req, res) => {
     res.render('portfolio', { items: videos })
 })
 
+server.get('/video', (req, res) => {
+    const id = req.query.id
+
+    const video = videos.find(showVideo => { return showVideo.id == id })
+
+
+    res.render('video', { items: video })
+})
+
+
 
 
 // funcao 404
