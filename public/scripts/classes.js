@@ -16,8 +16,8 @@ document
 for (let card of cards) {
     card.addEventListener('click', () => {
         const videoId = card.getAttribute('id')
-        modal.classList.remove('hide')
-        modal.querySelector('iframe').src=`https://youtube.com/embed/${videoId}`
+        
+        window.location.href = `/video?id=${videoId}`
     })
 }
 

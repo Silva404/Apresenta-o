@@ -1,5 +1,6 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
+const videos = require('./data')
 
 const server = express()
 
@@ -27,7 +28,7 @@ server.get('/about', (req, res) => {
 })
 
 server.get('/portfolio', (req, res) => {
-    res.render('portfolio')
+    res.render('portfolio', { items: videos })
 })
 
 

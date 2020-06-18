@@ -17,35 +17,24 @@
     </div>
 
     <section class="cards">
+
         {% for item in items %}
-            <div class="card" id="{{ item.id }}">
+            <div class="card" id="id">
                 <div class="card_image-container">
-                    <img src="{{ item.imgUrl }}" alt="EU">
+                    <img src="url" alt="EU">
                 </div>
 
                 <div class="card_content">
-                    <p>{{ item.tittle }}</p>
+                    <p>title</p>
                 </div>
 
                 <div class="card_info">
-                    <p>{{ item.duration }}</p>
-                    <p class="card_price">{{ item.price }}</p>
+                    <p> duration</p>
+                    <p class="card_price">price</p>
                 </div>
             </div>
         {% endfor %}
 
     </section>
 
-    {# <div class="modal-overlay hide">
-        <div class="modal">
-            <a class="close-modal">
-                <i class="material-icons">close</i>
-            </a>
-
-            <div class="modal-content">
-                <iframe src="https://youtube.com/embed/Ab33948mbW8" frameborder="0"></iframe>
-            </div>
-        </div> #}
-
-    <script src="scripts/classes.js"></script>
 {% endblock content %}
